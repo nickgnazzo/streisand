@@ -55,8 +55,6 @@
     src: /etc/nginx/sites-available/streisand
     state: link
 
-  # TODO:
-  #   Add to CI testing https://github.com/StreisandEffect/streisand/issues/643
 - block:
     - name: Keep a copy of our diagnostics on the server
       copy:
@@ -96,4 +94,3 @@
           when: hostvars['127.0.0.1']['ansible_system'] == "Darwin"
           become: no
       when: not streisand_noninteractive
-  when: not streisand_ci
