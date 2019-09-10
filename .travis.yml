@@ -32,4 +32,4 @@ install:
   - ansible --version
 
 script:
-  - ./tests/tests.sh
+  - travis_wait ./tests/tests.sh
